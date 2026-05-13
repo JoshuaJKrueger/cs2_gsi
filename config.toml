@@ -1,0 +1,46 @@
+[game_install_info]
+reg_path = "HKEY_CURRENT_USER\Software\Valve\Steam"
+reg_name = "SteamPath"
+reg_type = "REG_SZ"
+base_dir = ""
+rel_path = "\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg"
+
+
+[gamestate_integration]
+Config = {
+    title = "test v.1",
+    options = {
+        uri = "http://127.0.0.1:3000",
+        timeout   =  5.0,
+        buffer    =  0.1,
+        throttle  =  0.5,
+        heartbeat = 60.0,
+        output = {
+            precision_time     = 1
+            precision_position = 1
+            precision_vector   = 1
+        },
+        data
+        {
+            map_round_wins         = 1,
+            map                    = 1,
+            player_id              = 1,
+            player_match_stats     = 1,
+            player_state           = 1,
+            player_weapons         = 1,
+            provider               = 1,
+            round                  = 1,
+            tournamentdraft        = 1,
+
+            allgrenades            = 1,
+            allplayers_id          = 1,
+            allplayers_match_stats = 1,
+            allplayers_position    = 1,
+            allplayers_state       = 1,
+            allplayers_weapons     = 1,
+            bomb                   = 1,
+            phase_countdowns       = 1,
+            player_position        = 1,
+        },
+    },
+}
