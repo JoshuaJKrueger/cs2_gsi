@@ -7,7 +7,7 @@ pub struct PayloadLogger;
 
 impl PayloadLogger {
     pub async fn log_payload(payload: &Value) -> Result<String, String> {
-        let data_dir = "data";
+        let data_dir = "./data";
         fs::create_dir_all(data_dir).map_err(|e| {
             eprintln!("Failed to create data directory: {}", e);
             format!("IO error: {}", e)

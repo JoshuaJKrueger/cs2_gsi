@@ -1,0 +1,835 @@
+{
+  "fields": {
+    "map": {
+      "examples": [
+        true,
+        true
+      ],
+      "seen_in": "2/10",
+      "type": "boolean"
+    },
+    "map.mode": {
+      "examples": [
+        "custom",
+        "custom",
+        "custom"
+      ],
+      "seen_in": "6/10",
+      "type": "string"
+    },
+    "map.name": {
+      "examples": [
+        "de_mirage",
+        "de_mirage",
+        "de_mirage"
+      ],
+      "seen_in": "6/10",
+      "type": "string"
+    },
+    "map.num_matches_to_win_series": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "6/10",
+      "type": "integer"
+    },
+    "map.phase": {
+      "examples": [
+        "warmup",
+        "live",
+        "live"
+      ],
+      "seen_in": "7/10",
+      "type": "string"
+    },
+    "map.round": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "6/10",
+      "type": "integer"
+    },
+    "map.team_ct.consecutive_round_losses": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "6/10",
+      "type": "integer"
+    },
+    "map.team_ct.matches_won_this_series": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "6/10",
+      "type": "integer"
+    },
+    "map.team_ct.score": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "6/10",
+      "type": "integer"
+    },
+    "map.team_ct.timeouts_remaining": {
+      "examples": [
+        1,
+        1,
+        1
+      ],
+      "seen_in": "6/10",
+      "type": "integer"
+    },
+    "map.team_t.consecutive_round_losses": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "6/10",
+      "type": "integer"
+    },
+    "map.team_t.matches_won_this_series": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "6/10",
+      "type": "integer"
+    },
+    "map.team_t.score": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "6/10",
+      "type": "integer"
+    },
+    "map.team_t.timeouts_remaining": {
+      "examples": [
+        1,
+        1,
+        1
+      ],
+      "seen_in": "6/10",
+      "type": "integer"
+    },
+    "player": {
+      "examples": [
+        true,
+        true
+      ],
+      "seen_in": "2/10",
+      "type": "boolean"
+    },
+    "player.activity": {
+      "examples": [
+        "menu",
+        "playing",
+        "playing"
+      ],
+      "seen_in": "9/10",
+      "type": "string"
+    },
+    "player.match_stats.assists": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.match_stats.deaths": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.match_stats.kills": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.match_stats.mvps": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.match_stats.score": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.name": {
+      "examples": [
+        "PiggMiner",
+        "PiggMiner",
+        "PiggMiner"
+      ],
+      "seen_in": "8/10",
+      "type": "string"
+    },
+    "player.observer_slot": {
+      "examples": [
+        12,
+        12,
+        12
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.state.armor": {
+      "examples": [
+        100,
+        100,
+        100
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.state.burning": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.state.equip_value": {
+      "examples": [
+        4050,
+        4050,
+        4050
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.state.flashed": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.state.health": {
+      "examples": [
+        100,
+        100,
+        100
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.state.helmet": {
+      "examples": [
+        false,
+        false,
+        false
+      ],
+      "seen_in": "5/10",
+      "type": "boolean"
+    },
+    "player.state.money": {
+      "examples": [
+        99999,
+        99999,
+        99999
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.state.round_killhs": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.state.round_kills": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.state.smoked": {
+      "examples": [
+        0,
+        0,
+        0
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.steamid": {
+      "examples": [
+        "76561198144914504",
+        "76561198144914504",
+        "76561198144914504"
+      ],
+      "seen_in": "8/10",
+      "type": "string"
+    },
+    "player.team": {
+      "examples": [
+        "T",
+        "T",
+        "T"
+      ],
+      "seen_in": "5/10",
+      "type": "string"
+    },
+    "player.weapons.weapon_0.name": {
+      "examples": [
+        "weapon_knife_t",
+        "weapon_knife_t",
+        "weapon_knife_t"
+      ],
+      "seen_in": "5/10",
+      "type": "string"
+    },
+    "player.weapons.weapon_0.paintkit": {
+      "examples": [
+        "default",
+        "default",
+        "default"
+      ],
+      "seen_in": "5/10",
+      "type": "string"
+    },
+    "player.weapons.weapon_0.state": {
+      "examples": [
+        "holstered",
+        "holstered",
+        "active"
+      ],
+      "seen_in": "6/10",
+      "type": "string"
+    },
+    "player.weapons.weapon_0.type": {
+      "examples": [
+        "Knife",
+        "Knife",
+        "Knife"
+      ],
+      "seen_in": "5/10",
+      "type": "string"
+    },
+    "player.weapons.weapon_1.ammo_clip": {
+      "examples": [
+        7,
+        7,
+        7
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.weapons.weapon_1.ammo_clip_max": {
+      "examples": [
+        7,
+        7,
+        7
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.weapons.weapon_1.ammo_reserve": {
+      "examples": [
+        3,
+        3,
+        3
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.weapons.weapon_1.name": {
+      "examples": [
+        "weapon_deagle",
+        "weapon_deagle",
+        "weapon_deagle"
+      ],
+      "seen_in": "5/10",
+      "type": "string"
+    },
+    "player.weapons.weapon_1.paintkit": {
+      "examples": [
+        "default",
+        "default",
+        "default"
+      ],
+      "seen_in": "5/10",
+      "type": "string"
+    },
+    "player.weapons.weapon_1.state": {
+      "examples": [
+        "holstered",
+        "holstered",
+        "holstered"
+      ],
+      "seen_in": "5/10",
+      "type": "string"
+    },
+    "player.weapons.weapon_1.type": {
+      "examples": [
+        "Pistol",
+        "Pistol",
+        "Pistol"
+      ],
+      "seen_in": "5/10",
+      "type": "string"
+    },
+    "player.weapons.weapon_2.ammo_clip": {
+      "examples": [
+        30,
+        30,
+        30
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.weapons.weapon_2.ammo_clip_max": {
+      "examples": [
+        30,
+        30,
+        30
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.weapons.weapon_2.ammo_reserve": {
+      "examples": [
+        3,
+        3,
+        3
+      ],
+      "seen_in": "5/10",
+      "type": "integer"
+    },
+    "player.weapons.weapon_2.name": {
+      "examples": [
+        "weapon_ak47",
+        "weapon_ak47",
+        "weapon_ak47"
+      ],
+      "seen_in": "5/10",
+      "type": "string"
+    },
+    "player.weapons.weapon_2.paintkit": {
+      "examples": [
+        "default",
+        "default",
+        "default"
+      ],
+      "seen_in": "5/10",
+      "type": "string"
+    },
+    "player.weapons.weapon_2.state": {
+      "examples": [
+        "active",
+        "active",
+        "holstered"
+      ],
+      "seen_in": "6/10",
+      "type": "string"
+    },
+    "player.weapons.weapon_2.type": {
+      "examples": [
+        "Rifle",
+        "Rifle",
+        "Rifle"
+      ],
+      "seen_in": "5/10",
+      "type": "string"
+    },
+    "previously.map": {
+      "examples": [
+        true,
+        true
+      ],
+      "seen_in": "2/10",
+      "type": "boolean"
+    },
+    "previously.map.phase": {
+      "examples": [
+        "warmup"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.player": {
+      "examples": [
+        true,
+        true
+      ],
+      "seen_in": "2/10",
+      "type": "boolean"
+    },
+    "previously.player.activity": {
+      "examples": [
+        "playing"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.player.match_stats.assists": {
+      "examples": [
+        0
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.match_stats.deaths": {
+      "examples": [
+        0
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.match_stats.kills": {
+      "examples": [
+        0
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.match_stats.mvps": {
+      "examples": [
+        0
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.match_stats.score": {
+      "examples": [
+        0
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.observer_slot": {
+      "examples": [
+        12
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.state.armor": {
+      "examples": [
+        100
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.state.burning": {
+      "examples": [
+        0
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.state.equip_value": {
+      "examples": [
+        4050
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.state.flashed": {
+      "examples": [
+        0
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.state.health": {
+      "examples": [
+        100
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.state.helmet": {
+      "examples": [
+        false
+      ],
+      "seen_in": "1/10",
+      "type": "boolean"
+    },
+    "previously.player.state.money": {
+      "examples": [
+        99999
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.state.round_killhs": {
+      "examples": [
+        0
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.state.round_kills": {
+      "examples": [
+        0
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.state.smoked": {
+      "examples": [
+        0
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.team": {
+      "examples": [
+        "T"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.player.weapons.weapon_0.name": {
+      "examples": [
+        "weapon_knife_t"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.player.weapons.weapon_0.paintkit": {
+      "examples": [
+        "default"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.player.weapons.weapon_0.state": {
+      "examples": [
+        "holstered",
+        "active"
+      ],
+      "seen_in": "2/10",
+      "type": "string"
+    },
+    "previously.player.weapons.weapon_0.type": {
+      "examples": [
+        "Knife"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.player.weapons.weapon_1.ammo_clip": {
+      "examples": [
+        7
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.weapons.weapon_1.ammo_clip_max": {
+      "examples": [
+        7
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.weapons.weapon_1.ammo_reserve": {
+      "examples": [
+        3
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.weapons.weapon_1.name": {
+      "examples": [
+        "weapon_deagle"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.player.weapons.weapon_1.paintkit": {
+      "examples": [
+        "default"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.player.weapons.weapon_1.state": {
+      "examples": [
+        "holstered"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.player.weapons.weapon_1.type": {
+      "examples": [
+        "Pistol"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.player.weapons.weapon_2.ammo_clip": {
+      "examples": [
+        30
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.weapons.weapon_2.ammo_clip_max": {
+      "examples": [
+        30
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.weapons.weapon_2.ammo_reserve": {
+      "examples": [
+        3
+      ],
+      "seen_in": "1/10",
+      "type": "integer"
+    },
+    "previously.player.weapons.weapon_2.name": {
+      "examples": [
+        "weapon_ak47"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.player.weapons.weapon_2.paintkit": {
+      "examples": [
+        "default"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.player.weapons.weapon_2.state": {
+      "examples": [
+        "active",
+        "holstered"
+      ],
+      "seen_in": "2/10",
+      "type": "string"
+    },
+    "previously.player.weapons.weapon_2.type": {
+      "examples": [
+        "Rifle"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "previously.round": {
+      "examples": [
+        true,
+        true
+      ],
+      "seen_in": "2/10",
+      "type": "boolean"
+    },
+    "previously.round.phase": {
+      "examples": [
+        "freezetime"
+      ],
+      "seen_in": "1/10",
+      "type": "string"
+    },
+    "provider.appid": {
+      "examples": [
+        730,
+        730,
+        730
+      ],
+      "seen_in": "10/10",
+      "type": "integer"
+    },
+    "provider.name": {
+      "examples": [
+        "Counter-Strike: Global Offensive",
+        "Counter-Strike: Global Offensive",
+        "Counter-Strike: Global Offensive"
+      ],
+      "seen_in": "10/10",
+      "type": "string"
+    },
+    "provider.steamid": {
+      "examples": [
+        "76561198144914504",
+        "76561198144914504",
+        "76561198144914504"
+      ],
+      "seen_in": "10/10",
+      "type": "string"
+    },
+    "provider.timestamp": {
+      "examples": [
+        1778712072,
+        1778712129,
+        1778712131
+      ],
+      "seen_in": "10/10",
+      "type": "integer"
+    },
+    "provider.version": {
+      "examples": [
+        14160,
+        14160,
+        14160
+      ],
+      "seen_in": "10/10",
+      "type": "integer"
+    },
+    "round": {
+      "examples": [
+        true,
+        true
+      ],
+      "seen_in": "2/10",
+      "type": "boolean"
+    },
+    "round.phase": {
+      "examples": [
+        "live",
+        "freezetime",
+        "freezetime"
+      ],
+      "seen_in": "6/10",
+      "type": "string"
+    }
+  },
+  "inferred_from_payloads": 10,
+  "title": "CS:GO Game State Integration Schema"
+}
