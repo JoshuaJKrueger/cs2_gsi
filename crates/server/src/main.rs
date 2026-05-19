@@ -1,3 +1,4 @@
+mod generated_structs;
 mod handler;
 mod logger;
 
