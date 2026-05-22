@@ -1,41 +1,429 @@
 {
-  "inferred_from_payloads": 3,
+  "inferred_from_payloads": 10,
   "root": {
     "examples": [],
     "fields": {
-      "test_nested": {
-        "examples": [
-          "from nested to string"
-        ],
+      "map": {
+        "examples": [],
         "fields": {
-          "nested_obj": {
+          "mode": {
             "examples": [
-              3
+              "custom",
+              "deathmatch"
             ],
+            "type": "string"
+          },
+          "name": {
+            "examples": [
+              "de_mirage"
+            ],
+            "type": "string"
+          },
+          "num_matches_to_win_series": {
+            "examples": [
+              0
+            ],
+            "type": "u64"
+          },
+          "phase": {
+            "examples": [
+              "warmup",
+              "live"
+            ],
+            "type": "string"
+          },
+          "round": {
+            "examples": [
+              0
+            ],
+            "type": "u64"
+          },
+          "team_ct": {
+            "examples": [],
             "fields": {
-              "nested_key": {
+              "consecutive_round_losses": {
                 "examples": [
-                  "nested_value"
+                  0
                 ],
-                "type": "string"
+                "type": "u64"
+              },
+              "matches_won_this_series": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "score": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "timeouts_remaining": {
+                "examples": [
+                  1
+                ],
+                "type": "u64"
               }
             },
-            "type": "number | object"
+            "type": "object"
+          },
+          "team_t": {
+            "examples": [],
+            "fields": {
+              "consecutive_round_losses": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "matches_won_this_series": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "score": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "timeouts_remaining": {
+                "examples": [
+                  1
+                ],
+                "type": "u64"
+              }
+            },
+            "type": "object"
           }
         },
-        "type": "string | object"
+        "type": "object"
       },
-      "testarr": {
+      "player": {
         "examples": [],
-        "items": {
-          "examples": [
-            1,
-            "str",
-            "swapped_order"
-          ],
-          "type": "string | number"
+        "fields": {
+          "activity": {
+            "examples": [
+              "menu",
+              "playing"
+            ],
+            "type": "string"
+          },
+          "match_stats": {
+            "examples": [],
+            "fields": {
+              "assists": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "deaths": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "kills": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "mvps": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "score": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              }
+            },
+            "type": "object"
+          },
+          "name": {
+            "examples": [
+              "PiggMiner"
+            ],
+            "type": "string"
+          },
+          "observer_slot": {
+            "examples": [
+              12
+            ],
+            "type": "u64"
+          },
+          "state": {
+            "examples": [],
+            "fields": {
+              "armor": {
+                "examples": [
+                  100
+                ],
+                "type": "u64"
+              },
+              "burning": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "equip_value": {
+                "examples": [
+                  4050
+                ],
+                "type": "u64"
+              },
+              "flashed": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "health": {
+                "examples": [
+                  100
+                ],
+                "type": "u64"
+              },
+              "helmet": {
+                "examples": [
+                  false
+                ],
+                "type": "bool"
+              },
+              "money": {
+                "examples": [
+                  99999
+                ],
+                "type": "u64"
+              },
+              "round_killhs": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "round_kills": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              },
+              "smoked": {
+                "examples": [
+                  0
+                ],
+                "type": "u64"
+              }
+            },
+            "type": "object"
+          },
+          "steamid": {
+            "examples": [
+              "76561198144914504"
+            ],
+            "type": "string"
+          },
+          "team": {
+            "examples": [
+              "T"
+            ],
+            "type": "string"
+          },
+          "weapons": {
+            "examples": [],
+            "fields": {
+              "weapon_0": {
+                "examples": [],
+                "fields": {
+                  "name": {
+                    "examples": [
+                      "weapon_knife_t"
+                    ],
+                    "type": "string"
+                  },
+                  "paintkit": {
+                    "examples": [
+                      "default"
+                    ],
+                    "type": "string"
+                  },
+                  "state": {
+                    "examples": [
+                      "holstered",
+                      "active"
+                    ],
+                    "type": "string"
+                  },
+                  "type": {
+                    "examples": [
+                      "Knife"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "weapon_1": {
+                "examples": [],
+                "fields": {
+                  "ammo_clip": {
+                    "examples": [
+                      7
+                    ],
+                    "type": "u64"
+                  },
+                  "ammo_clip_max": {
+                    "examples": [
+                      7
+                    ],
+                    "type": "u64"
+                  },
+                  "ammo_reserve": {
+                    "examples": [
+                      3
+                    ],
+                    "type": "u64"
+                  },
+                  "name": {
+                    "examples": [
+                      "weapon_deagle"
+                    ],
+                    "type": "string"
+                  },
+                  "paintkit": {
+                    "examples": [
+                      "default"
+                    ],
+                    "type": "string"
+                  },
+                  "state": {
+                    "examples": [
+                      "holstered"
+                    ],
+                    "type": "string"
+                  },
+                  "type": {
+                    "examples": [
+                      "Pistol"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "weapon_2": {
+                "examples": [],
+                "fields": {
+                  "ammo_clip": {
+                    "examples": [
+                      30
+                    ],
+                    "type": "u64"
+                  },
+                  "ammo_clip_max": {
+                    "examples": [
+                      30
+                    ],
+                    "type": "u64"
+                  },
+                  "ammo_reserve": {
+                    "examples": [
+                      3
+                    ],
+                    "type": "u64"
+                  },
+                  "name": {
+                    "examples": [
+                      "weapon_ak47"
+                    ],
+                    "type": "string"
+                  },
+                  "paintkit": {
+                    "examples": [
+                      "default"
+                    ],
+                    "type": "string"
+                  },
+                  "state": {
+                    "examples": [
+                      "active",
+                      "holstered"
+                    ],
+                    "type": "string"
+                  },
+                  "type": {
+                    "examples": [
+                      "Rifle"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          }
         },
-        "type": "array"
+        "type": "object"
+      },
+      "provider": {
+        "examples": [],
+        "fields": {
+          "appid": {
+            "examples": [
+              730
+            ],
+            "type": "u64"
+          },
+          "name": {
+            "examples": [
+              "Counter-Strike: Global Offensive"
+            ],
+            "type": "string"
+          },
+          "steamid": {
+            "examples": [
+              "76561198144914504"
+            ],
+            "type": "string"
+          },
+          "timestamp": {
+            "examples": [
+              1778712072,
+              1778712129,
+              1778712131
+            ],
+            "type": "u64"
+          },
+          "version": {
+            "examples": [
+              14160
+            ],
+            "type": "u64"
+          }
+        },
+        "type": "object"
+      },
+      "round": {
+        "examples": [],
+        "fields": {
+          "phase": {
+            "examples": [
+              "live",
+              "freezetime"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
       }
     },
     "type": "object"

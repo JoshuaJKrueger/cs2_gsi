@@ -17,7 +17,15 @@ impl SchemaNode {
         let type_name = match value {
             Value::Null => "null",
             Value::Bool(_) => "bool",
-            Value::Number(_) => "number",
+            Value::Number(n) => {
+                if n.is_u64() {
+                    "u64"
+                } else if n.is_i64() {
+                    "i64"
+                } else {
+                    "f64"
+                }
+            }
             Value::String(_) => "string",
             Value::Array(_) => "array",
             Value::Object(_) => "object",
@@ -95,12 +103,7 @@ impl SchemaNode {
             let child = &node.fields[key];
             let types: Vec<_> = child.types_seen.iter().cloned().collect();
 
-            println!(
-                "{}- {} ({})",
-                pad,
-                key,
-                types.join(" | "),
-            );
+            println!("{}- {} ({})", pad, key, types.join(" | "),);
 
             self.print_node_summary(child, indent + 1);
         }

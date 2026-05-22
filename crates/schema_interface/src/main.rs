@@ -43,11 +43,12 @@ fn gen_code() {
         }
     };
 
-    let generated_code = generator::generate_code(schema);
-    let output_path = "./crates/server/src/generated_structs.rs";
-    match std::fs::write(output_path, &generated_code) {
-        Ok(_) => println!("Saved to {}", output_path),
-        Err(e) => eprintln!("Warning: Could not save to file: {}", e),
+    if let Some(generated_code) = generator::generate_code(schema) {
+        let output_path = "./crates/server/src/generated_structs.rs";
+        match std::fs::write(output_path, generated_code) {
+            Ok(_) => println!("Saved to {}", output_path),
+            Err(e) => eprintln!("Warning: Could not save to file: {}", e),
+        }
     }
 }
 
