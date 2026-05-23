@@ -26,32 +26,7 @@ fn walk(key: &str, node: &SchemaNode) -> String {
     let name = to_rust_struct_name(key);
 
     match node.r#type.as_str() {
-        "object" => {
-            if name == "RoundWins" {
-                format!("struct {} {{\n\tpub win_type: Vec<String>,\n}}\n", name)
-            } else {
-                let fields = node.fields.as_ref().unwrap();
-                let mut lines = Vec::new();
-                let mut nested_out = String::new();
-                for (k, v) in fields {
-                    let is_obj = v.r#type.as_str() == "object";
-                    let inner = if is_obj {
-                        nested_out.push_str(&walk(k, v));
-                        to_rust_struct_name(k)
-                    } else {
-                        walk(k, v)
-                    };
-
-                    lines.push(format!("\tpub {}: {}", sanitize_key(k), inner));
-                }
-                format!(
-                    "struct {} {{\n{}\n}}\n{}",
-                    name,
-                    lines.join(",\n"),
-                    nested_out
-                )
-            }
-        }
+        "object" => handle_obj(name, node),
         "array" => {
             let inner = node.items.as_ref().unwrap();
             format!("Vec<{}>", walk("", inner))
@@ -97,4 +72,51 @@ fn to_rust_struct_name(k: &str) -> String {
             }
         })
         .collect()
+}
+
+fn handle_obj(name: String, node: &SchemaNode) -> String {
+    let fields = node.fields.as_ref().unwrap();
+    match name.as_str() {
+        "RoundWins" => "struct RoundWins {\n\tpub win_type: Vec<String>,\n}\n".to_string(),
+        "Weapons" => {
+            let weapon = fields.values().next().unwrap();
+            let weapon_struct = walk("Weapon", weapon);
+            format!(
+                "struct Weapons {{\n\tpub weapons: Vec<Weapon>,\n}}\n{}",
+                weapon_struct
+            )
+        }
+        // "TeamCt" => {
+        //     let mut lines = Vec::new();
+        //     for (k, v) in fields {
+        //         lines.push(format!("\tpub {}: {}", sanitize_key(k), walk(k, v)));
+        //     }
+        //     format!(
+        //         "struct Team {{\n\tpub side: Sides,\n{}\n}}\nenum Sides {{\n\tCT,\n\tT,\n}}\n",
+        //         lines.join(",\n")
+        //     )
+        // }
+        // "TeamT" => String::new(),
+        _ => {
+            let mut lines = Vec::new();
+            let mut nested_out = String::new();
+            for (k, v) in fields {
+                let is_obj = v.r#type.as_str() == "object";
+                let inner = if is_obj {
+                    nested_out.push_str(&walk(k, v));
+                    to_rust_struct_name(k)
+                } else {
+                    walk(k, v)
+                };
+
+                lines.push(format!("\tpub {}: {}", sanitize_key(k), inner));
+            }
+            format!(
+                "struct {} {{\n{}\n}}\n{}",
+                name,
+                lines.join(",\n"),
+                nested_out
+            )
+        }
+    }
 }
