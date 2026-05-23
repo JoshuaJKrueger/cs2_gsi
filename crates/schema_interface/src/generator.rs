@@ -27,21 +27,30 @@ fn walk(key: &str, node: &SchemaNode) -> String {
 
     match node.r#type.as_str() {
         "object" => {
-            let fields = node.fields.as_ref().unwrap();
-            let mut lines = Vec::new();
-            let mut nested_out = String::new();
-            for (k, v) in fields {
-                let is_obj = v.r#type.as_str() == "object";
-                let inner = if is_obj {
-                    nested_out.push_str(&walk(k, v));
-                    to_rust_struct_name(k)
-                } else {
-                    walk(k, v)
-                };
+            if name == "RoundWins" {
+                format!("struct {} {{\n\tpub win_type: Vec<String>,\n}}\n", name)
+            } else {
+                let fields = node.fields.as_ref().unwrap();
+                let mut lines = Vec::new();
+                let mut nested_out = String::new();
+                for (k, v) in fields {
+                    let is_obj = v.r#type.as_str() == "object";
+                    let inner = if is_obj {
+                        nested_out.push_str(&walk(k, v));
+                        to_rust_struct_name(k)
+                    } else {
+                        walk(k, v)
+                    };
 
-                lines.push(format!("\tpub {}: {}", sanitize_key(k), inner));
+                    lines.push(format!("\tpub {}: {}", sanitize_key(k), inner));
+                }
+                format!(
+                    "struct {} {{\n{}\n}}\n{}",
+                    name,
+                    lines.join(",\n"),
+                    nested_out
+                )
             }
-            format!("struct {} {{\n{}\n}}\n{}", name, lines.join(",\n"), nested_out)
         }
         "array" => {
             let inner = node.items.as_ref().unwrap();
